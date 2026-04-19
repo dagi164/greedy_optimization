@@ -8,21 +8,6 @@
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Algorithms](#algorithms)
-- [Complexity Analysis](#complexity-analysis)
-- [Project Structure](#project-structure)
-- [Dataset](#dataset)
-- [Experiments](#experiments)
-- [Visualizations](#visualizations)
-- [Requirements](#requirements)
-- [How to Run](#how-to-run)
-- [Results Summary](#results-summary)
-
----
-
 ## Overview
 
 The **Knapsack Problem** is a fundamental combinatorial optimization problem: given a set of items each with a weight and profit, select items to maximize total profit without exceeding a weight capacity.
@@ -134,16 +119,47 @@ The small dataset (n=10) is used to run **both** algorithms side-by-side and ver
 
 ## Visualizations
 
-Six charts are automatically generated and saved to the `images/` folder:
+Six charts are automatically generated and saved to the `images/` folder when the script runs.
 
-| File | Chart Type | Description |
-|---|---|---|
-| `profit_vs_capacity.png` | Bar chart | Total profit at 50%, 75%, 90% capacity |
-| `execution_time.png` | Line chart | Execution time across capacity levels |
-| `small_dataset_items.png` | Grouped bar | Weight vs profit per item (small dataset) |
-| `fractional_vs_zero_one.png` | Bar chart | Profit comparison: Fractional vs 0/1 |
-| `ratio_distribution.png` | Bar chart | Profit/weight ratio per item |
-| `complexity_comparison.png` | Line chart | Theoretical O(n log n) vs O(n·W) growth |
+### Total Profit vs Capacity
+> Fractional Knapsack profit across the three capacity scenarios (50%, 75%, 90%).
+
+![Profit vs Capacity](images/profit_vs_capacity.png)
+
+---
+
+### Execution Time vs Capacity
+> How long the greedy algorithm takes at each capacity level — confirms O(n log n) near-instant performance.
+
+![Execution Time](images/execution_time.png)
+
+---
+
+### Fractional vs 0/1 Profit Comparison
+> Side-by-side profit comparison on the small dataset. Fractional is always ≥ 0/1 since fractions are allowed.
+
+![Fractional vs 0/1](images/fractional_vs_zero_one.png)
+
+---
+
+### Small Dataset — Weight vs Profit per Item
+> Grouped bar chart showing each item's weight and profit in the 10-item verification dataset.
+
+![Small Dataset Items](images/small_dataset_items.png)
+
+---
+
+### Profit/Weight Ratio Distribution
+> The ratio that drives the greedy selection — higher ratio items are picked first.
+
+![Ratio Distribution](images/ratio_distribution.png)
+
+---
+
+### Theoretical Complexity Comparison
+> Illustrates how O(n log n) and O(n·W) grow as the number of items increases.
+
+![Complexity Comparison](images/complexity_comparison.png)
 
 ---
 
